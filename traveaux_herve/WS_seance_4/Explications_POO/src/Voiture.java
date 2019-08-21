@@ -3,12 +3,14 @@ public class Voiture extends ServiceVoiture{
 
 	//marque, modele , annee , la vitesse max , la vitesse en cours 
 	//accelerer , freiner , stoper 
-	
+	// les variables d'objet : Elles sont lié aux objets de la classe Voiture.
 	private String marque;
 	private String modele;
 	private int annee;
 	private double vitesseMax;
 	private Double vitesseEncours;
+	//Les variables de classe/static/partagée entre toutes les intances d'une meme classe.
+	public static int nbVoitureCrees;
 	
 	
 	// Type prémitif : le type commence par miniscule
@@ -18,10 +20,11 @@ public class Voiture extends ServiceVoiture{
 	public Voiture(String marque) {
 		//super();
 		this.marque = marque;
+		Voiture.nbVoitureCrees++;
 	}
 
 	public Voiture() {
-		
+		Voiture.nbVoitureCrees++;
 	}
 
 	public Voiture(String marque, String modele, int annee, double vitesseMax, Double vitesseEncours) {
@@ -31,6 +34,7 @@ public class Voiture extends ServiceVoiture{
 		this.annee = annee;
 		this.vitesseMax = vitesseMax;
 		this.vitesseEncours = vitesseEncours;
+		Voiture.nbVoitureCrees++;//Voiture.nbVoitureCrees = Voiture.nbVoitureCrees +1
 	}
 	
 	//visiblité typeRetour nomMethode([par1],[par2],...); ==> la signature d'une méthode

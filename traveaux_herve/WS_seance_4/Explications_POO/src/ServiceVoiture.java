@@ -40,8 +40,13 @@ public class ServiceVoiture implements IServiceVoiture{
 	}
 
 	@Override
-	public int nombreVoiturecrees() {
-		// TODO pour hervé
+	public int nombreVoitureCrees() {
+		return Voiture.nbVoitureCrees;
+	}
+
+	@Override
+	public int nombreVoitureCrees(Voiture v) {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
